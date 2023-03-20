@@ -1,3 +1,4 @@
 pandas==1.5.3
+pandas_market_calendars==4.1.4
 plotly==5.13.1
 yfinance==0.2.12

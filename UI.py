@@ -1,5 +1,5 @@
 import tkinter as tk
-import Stock as St
+from Stock import Stock_Search as St
 
 window = tk.Tk()
 window.title("My Stock")#標題
@@ -18,10 +18,9 @@ def On_button_click():
             label.grid(row=3,column=0,sticky="NW")
     Load_num()
     Stock_unm, Stock_date, Stock_time = Load_num()
-    stock_search = St.Stock_Search(Stock_unm, Stock_date, Stock_time)
+    stock_search = St(Stock_unm, Stock_date, Stock_time)
     #print(Load_num())  測試用
     stock_search.Out_Stock()
-    stock_search=St.Stock_Search(Stock_unm,Stock_date,Stock_time)
 def Wrong_num():
     label = tk.Label(window, text="輸入正確代碼")
     label.grid(row=3,column=0,sticky="NW")
